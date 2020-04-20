@@ -117,6 +117,9 @@ body{
 .blue{
   border-color: var(--Blue);
 }
+footer.flex-item{
+  flex-basis: 100%;
+}
 @media screen and (max-width:375px){
   .cards-container{
     grid: 1fr 2fr 1fr / 1fr;
