@@ -1,0 +1,141 @@
+:root{
+--red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--VeryDarkBlue: hsl(234, 12%, 34%);
+--GrayishBlue: hsl(229, 6%, 66%);
+--VeryLightGray: hsl(0, 0%, 98%);
+}
+body{
+  background-color: hsl(0, 0%, 98%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  text-decoration: none;
+  color: hsl(228, 62%, 31%); }
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+.flex-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;  
+}
+.flex-item:nth-child(1){
+  flex-basis: 100%;
+}
+.title{
+  color: var(--VeryDarkBlue);
+  line-height: 1.5;
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+  width: 40%;
+}
+.description{
+  color: var(--GrayishBlue);
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.5;
+  width: 40%;
+}
+.cards-container{
+  /* border: 1px solid black; */
+  display: grid;
+  grid: 100% /repeat(3, 1fr);
+}
+.grid-colum{
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 20px;
+}
+.card{
+  flex: 1 1 100%;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, .3);
+  border-top: 5px solid;
+  width: 160px;
+  height: 210px;
+}
+.card-description{
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 80%;
+  text-align: left;
+}
+.card-name{
+  color: var(--VeryDarkBlue);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.card-text{
+  font-size: .7em;
+}
+.card-icon{
+  position: relative;
+  bottom: 30px;
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+.icon{
+  height: 60px;
+}
+.cyan{
+  border-color: var(--Cyan);
+}
+.red{
+  border-color: var(--red);
+}
+.orange{
+  margin-top: 15px;
+  margin-bottom: 50px;
+  border-color: var(--Orange);
+}
+.blue{
+  border-color: var(--Blue);
+}
+@media screen and (max-width:375px){
+  .cards-container{
+    grid: 1fr 2fr 1fr / 1fr;
+  }
+  .flex-item{
+    min-width: 300px;
+  }
+  .title{
+    font-size: 1.5em;
+    width: 100%;
+  }
+  .description{
+    width: 80%;
+  }
+  .orange{
+    margin-bottom: 0;
+  }
+  .description.card-description{
+    width: 80%;
+  }
+}
+
