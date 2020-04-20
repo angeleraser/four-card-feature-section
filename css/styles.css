@@ -118,7 +118,8 @@ body{
   border-color: var(--Blue);
 }
 footer.flex-item{
-  flex-basis: 100%;
+  
+  width: 100%;
 }
 @media screen and (max-width:375px){
   .cards-container{
